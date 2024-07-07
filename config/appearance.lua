@@ -3,14 +3,21 @@ local gpu_adapters = require('utils.gpu_adapter')
 local colors = require('colors.custom')
 
 return {
-   animation_fps = 60,
-   max_fps = 60,
+   animation_fps = 144,
+   max_fps = 144,
    front_end = 'WebGpu',
    webgpu_power_preference = 'HighPerformance',
    webgpu_preferred_adapter = gpu_adapters:pick_best(),
 
    -- color scheme
-   colors = colors,
+   -- colors = z,
+   color_scheme = 'Atom',
+   --cursor
+
+   cursor_blink_ease_in = "Linear",
+   cursor_blink_ease_in = "Linear",
+   cursor_blink_rate = 300,
+   default_cursor_style = "BlinkingBar",
 
    -- background
    background = {
@@ -38,6 +45,11 @@ return {
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window
+   window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+   integrated_title_button_alignment = "Right",
+   integrated_title_button_style = "Gnome",
+   initial_cols = 120,
+   initial_rows = 25,
    window_padding = {
       left = 5,
       right = 10,

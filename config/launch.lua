@@ -6,15 +6,16 @@ local options = {
 }
 
 if platform.is_win then
-   options.default_prog = { 'pwsh' }
+   options.default_prog = { 'ssh', 'arch@as.calsil.top', '-p', '22001' }
    options.launch_menu = {
-      { label = 'PowerShell Core', args = { 'pwsh' } },
       { label = 'PowerShell Desktop', args = { 'powershell' } },
-      { label = 'Command Prompt', args = { 'cmd' } },
-      { label = 'Nushell', args = { 'nu' } },
       {
-         label = 'Git Bash',
-         args = { 'C:\\Users\\kevin\\scoop\\apps\\git\\current\\bin\\bash.exe' },
+         label = 'Academic Sanctum',
+         args = { 'ssh', 'arch@as.calsil.top', '-p', '22001' },
+      },
+      {
+         label = 'Academic Sanctum CS',
+         args = { 'ssh', 'arch@as.calsil.top', '-p', '22010' },
       },
    }
 elseif platform.is_mac then
